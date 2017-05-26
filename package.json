@@ -1,0 +1,25 @@
+{
+  "name": "battlequote",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A mock sales application based on purchasing supplies for a battle.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisstowe/battlequote.git"
+  },
+  "keywords": [
+    "battlequote",
+    "battle",
+    "quote"
+  ],
+  "author": "Chris Stowe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisstowe/battlequote/issues"
+  },
+  "homepage": "https://github.com/chrisstowe/battlequote#readme"
+}
