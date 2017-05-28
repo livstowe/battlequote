@@ -6,6 +6,8 @@ var path = require('path');
 var express = require('express');
 var app = express();
 
+console.log("Starting the website service.");
+
 // Serve static content.
 app.use(express.static(path.join(__dirname , '..', 'public')));
 
@@ -35,6 +37,6 @@ app.use(function (req, res, next) {
 });
 
 // Start the server.
-app.listen(55551, function() {
-  console.log('Express server running on port 55551.');
+app.listen(7000, function() {
+  console.log('Express server running on port 7000.');
 });
