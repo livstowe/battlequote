@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "6.10.3"
 env:
-  - TEST_DIR=server
+  - TEST_DIR=website
 script: cd $TEST_DIR && npm install && npm test
