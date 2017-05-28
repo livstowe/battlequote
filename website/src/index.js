@@ -2,19 +2,18 @@
  * Copyright 2017-present, Chris Stowe.
  * All rights reserved.
  */
+var path = require('path');
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, resp) {
-  // TODO: Send main HTML instead.
-  resp.send("Welcome!");
-});
+// Serve static content.
+app.use(express.static(path.join(__dirname , '..', 'public')));
 
 // Handle errors.
 app.use(function (err, req, res, next) {
   console.error(err.stack);
   // 500 = Internal Error
-  res.status(500).send('An error has occurred.');
+  res.status(500).send('An error has occurred with BattleQuote.');
 });
 
 // Handle when no functions or routes respond.
@@ -36,6 +35,6 @@ app.use(function (req, res, next) {
 });
 
 // Start the server.
-app.listen(6000, function() {
-  console.log('Express server running on port 6000.');
+app.listen(55551, function() {
+  console.log('Express server running on port 55551.');
 });

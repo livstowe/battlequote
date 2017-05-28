@@ -1,21 +1,22 @@
 {
-  "name": "battlequote",
+  "name": "battlequote-website",
   "version": "1.0.0",
   "private": true,
-  "description": "A mock sales application based on purchasing supplies for a battle.",
-  "main": "index.js",
+  "description": "The main website for www.battlequote.com",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "node scripts/test.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/chrisstowe/battlequote.git"
   },
   "keywords": [
-    "battlequote",
+    "battlequote-website",
     "battle",
-    "quote"
+    "quote",
+    "website"
   ],
   "author": "Chris Stowe",
   "license": "MIT",
