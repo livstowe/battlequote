@@ -26,12 +26,12 @@ app.use(function (req, res, next) {
 
   if (req.accepts('html')) {
     // TODO: Send 404 HTML instead.
-    res.send('Not Found');
+    res.send('This is not the web page you are looking for.');
     return;
   }
 
   if (req.accepts('json')) {
-    res.send({ error: 'Not Found' });
+    res.send({ error: 'This is not the web page you are looking for.' });
     return;
   }
 });
