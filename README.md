@@ -1,10 +1,12 @@
+![BattleQuote logo](https://storage.googleapis.com/battlequote/images/asteroid.png)
+
 # BattleQuote [![Build Status](https://travis-ci.org/chrisstowe/battlequote.svg?branch=master)](https://travis-ci.org/chrisstowe/battlequote)
 
 A mock sales application based on purchasing supplies for a battle.
 
 This application is composed of various microservices running on the Google Cloud Platform.
 
-Please visit [www.battlequote.com](www.battlequote.com) to view this project live.
+Please visit [battlequote.com](http://battlequote.com/) to view this project live.
 
 ## Stack
 
@@ -16,6 +18,9 @@ Please visit [www.battlequote.com](www.battlequote.com) to view this project liv
 - Flow
 - Jest
 - Google Cloud Platform
+  - Compute Engine
+  - Cloud DNS
+  - Storage
 - Ubuntu
 
 ## Design
