@@ -11,40 +11,28 @@ process.env.NODE_ENV = 'production';
 console.log(`Starting. Environment: ${process.env.NODE_ENV}`);
 
 const express = require('express');
-const path = require('path');
+const historyApiFallback = require('connect-history-api-fallback');
+const paths = require('../config/paths');
 
 const app = express();
 
+// Catches anything and rewrites it to /index.html.
+// This is needed as routing is done by the client.
+app.use(historyApiFallback());
+
 // Serve static content.
-app.use(express.static(path.join(__dirname , '..', 'build')));
+app.use(express.static(paths.build));
 
 // Handle errors.
-app.use(function (err, req, res, next) {
+app.use((err, req, res, next) => {
   console.error(err.stack);
-  // 500 = Internal Error
+
+  // Internal Error.
   res.status(500).send('There is a disturbance in the force.');
-});
-
-// Handle when no functions or routes respond.
-// This must be the last middleware function on the stack.
-app.use(function (req, res, next) {
-  // 404 = Not Found
-  res.status(404);
-
-  if (req.accepts('html')) {
-    // TODO: Send 404 HTML instead.
-    res.send('This is not the web page you are looking for.');
-    return;
-  }
-
-  if (req.accepts('json')) {
-    res.send({ error: 'This is not the web page you are looking for.' });
-    return;
-  }
 });
 
 // Start the server.
 const serverPort = 7000;
-app.listen(serverPort, function() {
+app.listen(serverPort, () => {
   console.log(`Server started. Port: ${serverPort}`);
 });

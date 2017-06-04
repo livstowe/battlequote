@@ -10,8 +10,8 @@ process.env.NODE_ENV = 'production';
 console.log(`Building. Environment: ${process.env.NODE_ENV}`);
 
 const fs = require('fs-extra');
-const paths = require('../config/paths');
 const config = require('../config/webpack.config.prod');
+const paths = require('../config/paths');
 const webpack = require('webpack');
 
 // Empty the build directory.
@@ -22,5 +22,9 @@ const compiler = webpack(config);
 compiler.run((err, stats) => {
   if (err) {
    console.log(err.message);
+  }
+
+  if (stats) {
+    console.log(stats.toString());
   }
 });

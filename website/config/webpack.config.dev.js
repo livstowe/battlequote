@@ -115,7 +115,12 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
 
-    // This is necessary to emit hot updates (currently CSS only).
+    // Enables Hot Module Replacement.
     new webpack.HotModuleReplacementPlugin(),
+
+    // When there are errors while compiling this plugin skips the
+    // emitting phase (and recording phase), so there are no assets
+    // emitted that include errors.
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 };

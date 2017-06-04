@@ -2,7 +2,7 @@
  * Copyright 2017-present, Chris Stowe.
  * All rights reserved.
  * 
- * Description: The paths used in this project.
+ * Description: The absolute paths used in this project.
  */
 'use strict';
 
