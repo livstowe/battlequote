@@ -32,7 +32,7 @@ module.exports = {
   module: {
     // Rules for modules (configure loaders, parser options, etc.).
     rules: [
-      // Process JS with Babel.
+      // Process JS files.
       {
         // The matching conditions (both test and include must be matched).
         test: /\.jsx?$/,
@@ -41,13 +41,35 @@ module.exports = {
         ],
 
         // The loader which should be applied.
-        loader: "babel-loader",
+        loader: require.resolve("babel-loader"),
 
         // Options for the loader.
         options: {
           // Transform ES2015 and React code to normal javascript.
           presets: ["es2015", "react"],
         },
+      },
+
+      // Process CSS files.
+      {
+        // The matching conditions.
+        test: /\.css$/,
+
+        use: [
+          // The loader which should be applied.
+          require.resolve('style-loader'),
+          {
+            // The loader which should be applied.
+            loader: require.resolve('css-loader'),
+
+            // Options for the loader.
+            options: {
+              importLoaders: 1,
+              minimize: true,
+              sourceMap: true,
+            },
+          },
+        ],
       },
     ],
   },
@@ -88,7 +110,7 @@ module.exports = {
   
   // List of additional plugins.
   plugins: [
-    // Generates an `index.html` file with the <script> injected.
+    // Generates an HTML file with the <script> injected.
     new HtmlWebpackPlugin({
       // Injects the <script>.
       inject: true,
