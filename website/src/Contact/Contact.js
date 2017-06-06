@@ -17,18 +17,20 @@ class Contact extends Component {
         <h1 className="Title">Ready to chat?</h1>
         <h2>Chris Stowe</h2>
         <table>
-          <tr className="Contact-Row">
-            <td className="Contact-Type">Email:</td>
-            <td className="Contact-Value">chstowe@gmail.com</td>
-          </tr>
-          <tr className="Contact-Row">
-            <td className="Contact-Type">Twitter:</td>
-            <td className="Contact-Value">@realchrisstowe</td>
-          </tr>
-          <tr className="Contact-Row">
-            <td className="Contact-Type">GitHub:</td>
-            <td className="Contact-Value">https://github.com/chrisstowe</td>
-          </tr>
+          <tbody>
+            <tr className="Contact-Row">
+              <td className="Contact-Type">Email:</td>
+              <td className="Contact-Value">chstowe@gmail.com</td>
+            </tr>
+            <tr className="Contact-Row">
+              <td className="Contact-Type">Twitter:</td>
+              <td className="Contact-Value">@realchrisstowe</td>
+            </tr>
+            <tr className="Contact-Row">
+              <td className="Contact-Type">GitHub:</td>
+              <td className="Contact-Value">https://github.com/chrisstowe</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     );
