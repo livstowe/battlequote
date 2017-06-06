@@ -2,32 +2,40 @@
  * Copyright 2017-present, Chris Stowe.
  * All rights reserved.
  * 
- * Description: Defines all the routes for the website.
+ * Description: The definition of the Routes component.
+ *              Defines all the routes for the website.
  */
-'use strict';
 
-import React from 'react'
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
   browserHistory,
+  BrowserRouter as Router,
+  Redirect,
+  Route,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
 
+// Import the components that represent each page.
 import Home from '../Home/Home';
+import About from '../About/About';
 import Contact from '../Contact/Contact';
 import NotFound from '../NotFound/NotFound';
 
 const Routes = () => (
   <Router history={browserHistory}>
     <Switch>
-      <Route exact path="/" component={Home}/>
-      <Route path="/contact" component={Contact}/>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/404" component={NotFound} />
 
-      {/* If all other routes fail. */}
-      <Route path="*" component={NotFound}/>
+      {
+      /* Redirects to the /404 path when all else fails.
+          The /404 route is then resolved. */
+      }
+      <Redirect from="/*" to="/404" />
     </Switch>
   </Router>
-)
+);
 
 export default Routes;

@@ -92,8 +92,8 @@ module.exports = {
     hints: "warning",
 
     // These options control when webpack emits performance hints.
-    maxAssetSize: 200000, // bytes
-    maxEntrypointSize: 400000, // bytes
+    maxAssetSize: 2000000, // bytes
+    maxEntrypointSize: 4000000, // bytes
 
     // This property allows webpack to control what files are used to calculate performance hints.
     assetFilter: function(assetFilename) { 

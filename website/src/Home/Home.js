@@ -1,25 +1,24 @@
 /**
  * Copyright 2017-present, Chris Stowe.
  * All rights reserved.
+ * 
+ * Description: The definition of the Home component.
  */
+
 import React, { Component } from 'react';
-import NavBar from '../NavBar/NavBar'
+import Loader from '../Loader/Loader';
+import NavBar from '../NavBar/NavBar';
 import './Home.css';
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+class Home extends Component {
   render() {
-    const title = "Home";
-
     return (
       <div>
         <NavBar />
-        <div className="Home">
-          <h1 className="Home-text">{title}</h1>
-        </div>
+        <h1 className="Title">Coming Soon</h1>
+        <p>Please click the other Links.</p>
+        <Loader />
+        <p>Prepare yourself...</p>
       </div>
     );
   }

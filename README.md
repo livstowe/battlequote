@@ -1,4 +1,4 @@
-![BattleQuote logo](https://storage.googleapis.com/battlequote/images/asteroid.png)
+![BattleQuote logo](https://storage.googleapis.com/battlequote/images/logo.png)
 
 # BattleQuote [![Build Status](https://travis-ci.org/chrisstowe/battlequote.svg?branch=master)](https://travis-ci.org/chrisstowe/battlequote)
 

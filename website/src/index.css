@@ -1,0 +1,30 @@
+/**
+ * Copyright 2017-present, Chris Stowe.
+ * All rights reserved.
+ * 
+ * Description: The style for the entire website.
+ */
+ 
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+
+/* Space style text. */
+body {
+  background: #000;
+  color: #FFF;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+/* Web page titles. */
+.Title {
+  color: #AFF;
+  text-align: center;
+  text-shadow: 0 0 5px #FFF;
+}
+
+/* Center images. */
+img.Center {
+    display: block;
+    margin: 0 auto;
+}

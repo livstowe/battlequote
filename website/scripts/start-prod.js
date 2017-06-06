@@ -28,7 +28,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
 
   // Internal Error.
-  res.status(500).send('There is a disturbance in the force.');
+  res.status(500).send('500 - There is a disturbance in the force.');
 });
 
 // Start the server.
