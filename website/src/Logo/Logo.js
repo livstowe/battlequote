@@ -6,16 +6,17 @@
  */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Logo.css';
 
 const Logo = () => (
-  <a href="/">
+  <Link to="/">
     <img
       className="Logo"
       src="https://storage.googleapis.com/battlequote/images/logo.png"
       alt="Battle Quote"
     />
-  </a>
+  </Link>
 );
 
 export default Logo;
