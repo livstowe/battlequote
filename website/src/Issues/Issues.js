@@ -15,27 +15,22 @@ class Issues extends Component {
   constructor(props) {
     super(props);
     this.state = {openIssues:[], closedIssues:[]};
+    this.issueRequest = new IssueRequest();
     this.updateIssues = this.updateIssues.bind(this);
   }
 
+  /**
+   * Requests the latest issues from GitHub.
+   */
   updateIssues() {
-    const req = new IssueRequest();
-    const _this = this;
+    console.log('Updating Issues...');
 
-    req.getIssues('open', (issues) => {
-      _this.setState(
-        {
-          openIssues: issues
-        }
-      );
+    this.issueRequest.getIssues('open', (issues) => {
+      this.setState( { openIssues: issues } );
     });
 
-    req.getIssues('closed', (issues) => {
-      _this.setState(
-        {
-          closedIssues: issues
-        }
-      );
+    this.issueRequest.getIssues('closed', (issues) => {
+      this.setState( { closedIssues: issues } );
     });
   }
 
@@ -45,7 +40,7 @@ class Issues extends Component {
 
     // Set an update rate of 60 seconds.
     // This would be faster, but the GitHub API limits the amount of GET requests.
-    this.updateInterval = setInterval(() => this.updateIssues, 60000);
+    this.updateInterval = setInterval(() => this.updateIssues(), 60000);
   }
 
   componentWillUnmount() {
