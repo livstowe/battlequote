@@ -13,8 +13,12 @@ console.log(`Starting. Environment: ${process.env.NODE_ENV}`);
 const express = require('express');
 const historyApiFallback = require('connect-history-api-fallback');
 const paths = require('../config/paths');
+const requestLogger = require('./requestLogger');
 
 const app = express();
+
+// Log all requests.
+app.use(requestLogger);
 
 // Catches anything and rewrites it to /index.html.
 // This is needed as routing is done by the client.

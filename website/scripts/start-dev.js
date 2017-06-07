@@ -13,6 +13,7 @@ console.log(`Starting. Environment: ${process.env.NODE_ENV}`);
 const express = require('express');
 const historyApiFallback = require('connect-history-api-fallback');
 const paths = require('../config/paths');
+const requestLogger = require('./requestLogger');
 
 // Development specific requires.
 const config = require("../config/webpack.config.dev");
@@ -22,6 +23,9 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const app = express();
 const compiler = webpack(config);
+
+// Log all requests.
+app.use(requestLogger);
 
 // Catches anything and rewrites it to /index.html.
 // This is needed as routing is done by the client.
