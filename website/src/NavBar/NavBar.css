@@ -7,12 +7,12 @@
 
 .NavBar {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
 
-  color: #EEE;
   background-color: #000;
+  color: #FFF;
   text-align: center;
   text-shadow: 0 0 5px #FFF;
   border-style: outset;
@@ -43,10 +43,14 @@ li a {
 
 /* Highlights a NavBar element on hover */
 li a:hover:not(.active) {
-  color: lightgreen;
+  color: #0afc26;
 }
 
 /* Colors the active NavBar element. */
 .active {
-  background-color: darkgreen;
+  background-color: #067a13;
+}
+
+.BuildStatus {
+  float: right;
 }

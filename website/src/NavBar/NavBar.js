@@ -27,6 +27,9 @@ const NavBar = () => {
           <li className={'NavBar-li' + (path === '/about' && ' active')}>
             <Link className="NavBar-Link" to="/about">About</Link>
           </li>
+          <li className={'NavBar-li' + (path === '/issues' && ' active')}>
+            <Link className="NavBar-Link" to="/issues">Issues</Link>
+          </li>
           <li className={'NavBar-li' + (path === '/contact' && ' active')}>
              <Link className="NavBar-Link" to="/contact">Contact</Link>
           </li>
@@ -34,6 +37,10 @@ const NavBar = () => {
             <Link className="NavBar-Link" to="/404">404</Link>
           </li>
         </ul>
+
+        {/*<a className="BuildStatus" href="https://travis-ci.org/chrisstowe/battlequote">
+          <img src="https://travis-ci.org/chrisstowe/battlequote.svg?branch=master" />
+        </a>*/}
       </div>
 
       {
