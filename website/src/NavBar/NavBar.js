@@ -27,6 +27,9 @@ const NavBar = () => {
           <li className={'NavBar-li' + (path === '/about' && ' active')}>
             <Link className="NavBar-Link" to="/about">About</Link>
           </li>
+          <li className={'NavBar-li' + (path === '/design' && ' active')}>
+            <Link className="NavBar-Link" to="/design">Design</Link>
+          </li>
           <li className={'NavBar-li' + (path === '/issues' && ' active')}>
             <Link className="NavBar-Link" to="/issues">Issues</Link>
           </li>

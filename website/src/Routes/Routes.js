@@ -18,6 +18,7 @@ import {
 // Import the components that represent each page.
 import Home from '../Home/Home';
 import About from '../About/About';
+import Design from '../Design/Design';
 import Issues from '../Issues/Issues';
 import Contact from '../Contact/Contact';
 import NotFound from '../NotFound/NotFound';
@@ -27,6 +28,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/design" component={Design} />
       <Route path="/issues" component={Issues} />
       <Route path="/contact" component={Contact} />
       <Route path="/404" component={NotFound} />
