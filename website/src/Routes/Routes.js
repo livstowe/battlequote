@@ -9,7 +9,7 @@
 import React from 'react';
 import createBrowserHistory from 'history/createBrowserHistory'
 import {
-  BrowserRouter as Router,
+  Router,
   Redirect,
   Route,
   Switch
@@ -23,13 +23,21 @@ import Issues from '../Issues/Issues';
 import Contact from '../Contact/Contact';
 import NotFound from '../NotFound/NotFound';
 
-var history = createBrowserHistory();
+const history = createBrowserHistory();
+let prevLocation = {};
 
-// Update Google Analytics on virtual page changes.
-// This is required to handle client routing.
-history.listen((location) => {
+history.listen(location => {
+  // Update Google Analytics on virtual page changes.
+  // This is required to handle client routing.
   window.ga('set', 'page', location.pathname + location.search);
   window.ga('send', 'pageview');
+
+  // Update the scroll position on actual page changes.
+  const pathChanged = prevLocation.pathname !== location.pathname;
+  if (pathChanged) {
+    window.scrollTo(0, 0);
+  }
+  prevLocation = location;
 });
 
 const Routes = () => (
