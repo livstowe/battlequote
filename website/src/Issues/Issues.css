@@ -6,7 +6,7 @@
  */
  
 .IssueTable {
-  width: 100%;
+  width: 800px;
   border-collapse: collapse;
   background-color: #FFF;
   color: #000;
@@ -20,7 +20,7 @@
 }
 
 .IssueRow {
-  height: 20px;
+  height: 25px;
 }
 
 /* Causes an alternating row background color. */
