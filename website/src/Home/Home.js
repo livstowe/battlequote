@@ -15,10 +15,10 @@ class Home extends Component {
     return (
       <div>
         <NavBar />
-        <h1 className="Title">Coming Soon</h1>
-        <p>Please click the other Links.</p>
+        <h1 className="Title">Welcome</h1>
+        <p>This project is currently underway.</p>
+        <p>Please try the navigation bar above.</p>
         <Loader />
-        <p>Prepare yourself...</p>
       </div>
     );
   }

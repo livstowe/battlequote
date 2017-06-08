@@ -7,7 +7,7 @@
 
 import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
-import Design_md from '../../docs/Design.md';
+import design_md from '../../../docs/design.md';
 import './Design.css';
 
 class Design extends Component {
@@ -15,7 +15,7 @@ class Design extends Component {
     return (
       <div>
         <NavBar />
-        <div className="Markdown" dangerouslySetInnerHTML={{ __html: Design_md }} />
+        <div className="Markdown" dangerouslySetInnerHTML={{ __html: design_md }} />
       </div>
     );
   }
