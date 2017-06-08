@@ -5,16 +5,27 @@
  * Description: The style for the Contact component.
  */
 
-td.Contact-Type {
+.ContactTable {
+  border-collapse: collapse;
+  background-color: #FFF;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 12;
+ }
+
+.ContactRow {
+  height: 40px;
+}
+
+/* Causes an alternating row background color. */
+.ContactRow:nth-child(even){
+  background-color: #e0ebff
+}
+
+.ContactType {
   text-align: right;
-  padding: 10px;
 }
 
-td.Contact-Value {
+.ContactValue {
   text-align: left;
-  padding: 10px;
-}
-
-tr.Contact-Row:hover {
-  color: lightgreen;
 }

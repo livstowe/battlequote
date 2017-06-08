@@ -16,19 +16,31 @@ class Contact extends Component {
         <NavBar />
         <h1 className="Title">Ready to chat?</h1>
         <h2>Chris Stowe</h2>
-        <table>
+        <table className="ContactTable">
           <tbody>
-            <tr className="Contact-Row">
-              <td className="Contact-Type">Email:</td>
-              <td className="Contact-Value">chstowe@gmail.com</td>
+            <tr className="ContactRow">
+              <td className="ContactType">Email:</td>
+              <td className="ContactValue">
+                <a href="mailto:chstowe@gmail.com">
+                  chstowe@gmail.com
+                </a>
+              </td>
             </tr>
-            <tr className="Contact-Row">
-              <td className="Contact-Type">Twitter:</td>
-              <td className="Contact-Value">@realchrisstowe</td>
+            <tr className="ContactRow">
+              <td className="ContactType">Twitter:</td>
+              <td className="ContactValue">
+                <a href="https://twitter.com/realchrisstowe">
+                  @realchrisstowe
+                </a>
+              </td>
             </tr>
-            <tr className="Contact-Row">
-              <td className="Contact-Type">GitHub:</td>
-              <td className="Contact-Value">https://github.com/chrisstowe</td>
+            <tr className="ContactRow">
+              <td className="ContactType">GitHub:</td>
+              <td className="ContactValue">
+                <a href="https://github.com/chrisstowe">
+                  https://github.com/chrisstowe
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
