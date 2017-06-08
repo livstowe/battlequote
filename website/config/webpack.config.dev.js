@@ -42,7 +42,7 @@ module.exports = {
           paths.src,
         ],
 
-        // The loader which should be applied.
+        // A loader to apply.
         loader: require.resolve("babel-loader"),
 
         // Options for the loader.
@@ -58,10 +58,11 @@ module.exports = {
         test: /\.css$/,
 
         use: [
-          // The loader which should be applied.
+          // A loader to apply.
           require.resolve('style-loader'),
+
           {
-            // The loader which should be applied.
+            // A loader to apply.
             loader: require.resolve('css-loader'),
 
             // Options for the loader.
@@ -69,6 +70,20 @@ module.exports = {
               importLoaders: 1,
             },
           },
+        ],
+      },
+
+      // Process markdown files.
+      {
+        // The matching conditions.
+        test: /\.md$/,
+
+        use: [
+          // A loader to apply.
+          require.resolve('html-loader'),
+
+          // A loader to apply.
+          require.resolve('markdown-loader'),
         ],
       },
     ],

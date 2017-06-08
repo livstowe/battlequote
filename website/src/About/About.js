@@ -7,6 +7,7 @@
 
 import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
+import README_md from '../../../README.md'
 import './About.css';
 
 class About extends Component {
@@ -14,8 +15,7 @@ class About extends Component {
     return (
       <div>
         <NavBar />
-        <h1 className="Title">Simulated Sales Application</h1>
-        <p>This is a simulated sales application.</p>
+        <div className="Markdown" dangerouslySetInnerHTML={{ __html: README_md }} />
       </div>
     );
   }

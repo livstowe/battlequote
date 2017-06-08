@@ -4,27 +4,38 @@
  * 
  * Description: The style for the entire website.
  */
- 
+
 @import url(https://fonts.googleapis.com/css?family=Orbitron);
 
-/* Space style text. */
+/* Style for entire website. */
 body {
-  background: #000;
-  color: #FFF;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 16px;
   letter-spacing: 3px;
+  background: #000;
+  color: #FFF;
 }
 
-/* Web page titles. */
+/* Style for page titles. */
 .Title {
-  color: #AFF;
   text-align: center;
   text-shadow: 0 0 5px #FFF;
+  color: #AFF;
 }
 
-/* Center images. */
+/* Style for markdown elements. */
+div.Markdown {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 12;
+  letter-spacing: 0;
+  background-color: #FFF;
+  color: #000;
+}
+
+/* Style for centering images. */
 img.Center {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
