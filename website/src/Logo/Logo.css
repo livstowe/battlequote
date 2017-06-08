@@ -1,0 +1,14 @@
+/**
+ * Copyright 2017-present, Chris Stowe.
+ * All rights reserved.
+ * 
+ * Description: The style for the Logo component.
+ */
+
+.Logo {
+  width: 44px;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+}

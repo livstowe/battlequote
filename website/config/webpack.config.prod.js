@@ -32,7 +32,7 @@ module.exports = {
   module: {
     // Rules for modules (configure loaders, parser options, etc.).
     rules: [
-      // Process JS with Babel.
+      // Process JS files.
       {
         // The matching conditions (both test and include must be matched).
         test: /\.jsx?$/,
@@ -40,14 +40,51 @@ module.exports = {
           paths.src,
         ],
 
-        // The loader which should be applied.
-        loader: "babel-loader",
+        // A loader to apply.
+        loader: require.resolve("babel-loader"),
 
         // Options for the loader.
         options: {
           // Transform ES2015 and React code to normal javascript.
           presets: ["es2015", "react"],
         },
+      },
+
+      // Process CSS files.
+      {
+        // The matching conditions.
+        test: /\.css$/,
+
+        use: [
+          // A loader to apply.
+          require.resolve('style-loader'),
+
+          {
+            // A loader to apply.
+            loader: require.resolve('css-loader'),
+
+            // Options for the loader.
+            options: {
+              importLoaders: 1,
+              minimize: true,
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+
+      // Process markdown files.
+      {
+        // The matching conditions.
+        test: /\.md$/,
+
+        use: [
+          // A loader to apply.
+          require.resolve('html-loader'),
+
+          // A loader to apply.
+          require.resolve('markdown-loader'),
+        ],
       },
     ],
   },
@@ -70,8 +107,8 @@ module.exports = {
     hints: "warning",
 
     // These options control when webpack emits performance hints.
-    maxAssetSize: 200000, // bytes
-    maxEntrypointSize: 400000, // bytes
+    maxAssetSize: 2000000, // bytes
+    maxEntrypointSize: 4000000, // bytes
 
     // This property allows webpack to control what files are used to calculate performance hints.
     assetFilter: function(assetFilename) { 
@@ -88,7 +125,7 @@ module.exports = {
   
   // List of additional plugins.
   plugins: [
-    // Generates an `index.html` file with the <script> injected.
+    // Generates an HTML file with the <script> injected.
     new HtmlWebpackPlugin({
       // Injects the <script>.
       inject: true,

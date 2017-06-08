@@ -1,8 +1,8 @@
+# build
+/build
+
 # dependencies
 /node_modules
 
 # logs
 npm-debug.log*
-
-# build
-/build

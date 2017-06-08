@@ -1,0 +1,51 @@
+/**
+ * Copyright 2017-present, Chris Stowe.
+ * All rights reserved.
+ * 
+ * Description: The style for the NavBar component.
+ */
+
+.NavBar {
+  /* Forces the NavBar to always be at the top of the screen. */
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  
+  overflow: auto;
+  border: 1px solid #FFF;
+  background-color: #000;
+  color: #FFF;
+}
+
+.NavBarList {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.NavBarListItem {
+  float: left;
+  height: 45px;
+}
+
+/* Colors the active NavBar item. */
+.NavBarActive {
+  background-color: #067a13;
+}
+
+.NavBarLink {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: #FFF;
+}
+
+/* Highlights a NavBarLink on hover. */
+.NavBarLink:hover {
+  color: #0afc26;
+}

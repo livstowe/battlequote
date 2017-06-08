@@ -1,0 +1,31 @@
+/**
+ * Copyright 2017-present, Chris Stowe.
+ * All rights reserved.
+ * 
+ * Description: The style for the Contact component.
+ */
+
+.ContactTable {
+  border-collapse: collapse;
+  background-color: #FFF;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 12;
+ }
+
+.ContactRow {
+  height: 40px;
+}
+
+/* Causes an alternating row background color. */
+.ContactRow:nth-child(even){
+  background-color: #e0ebff
+}
+
+.ContactType {
+  text-align: right;
+}
+
+.ContactValue {
+  text-align: left;
+}

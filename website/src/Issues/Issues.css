@@ -1,0 +1,38 @@
+/**
+ * Copyright 2017-present, Chris Stowe.
+ * All rights reserved.
+ * 
+ * Description: The style for the Issues component.
+ */
+ 
+.IssueTable {
+  width: 800px;
+  border-collapse: collapse;
+  background-color: #FFF;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 12;
+ }
+
+.IssueHeader {
+  background-color: #067a13;
+  color: #FFF;
+}
+
+.IssueRow {
+  height: 25px;
+}
+
+/* Causes an alternating row background color. */
+.IssueRow:nth-child(even) {
+  background-color: #c2d1ed
+}
+
+.IssueLabel {
+  border: 1px solid #000;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+}

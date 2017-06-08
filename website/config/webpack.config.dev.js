@@ -34,7 +34,7 @@ module.exports = {
   module: {
     // Rules for modules (configure loaders, parser options, etc.).
     rules: [
-      // Process JS with Babel.
+      // Process JS files.
       {
         // The matching conditions (both test and include must be matched).
         test: /\.jsx?$/,
@@ -42,14 +42,49 @@ module.exports = {
           paths.src,
         ],
 
-        // The loader which should be applied.
-        loader: "babel-loader",
+        // A loader to apply.
+        loader: require.resolve("babel-loader"),
 
         // Options for the loader.
         options: {
           // Transform ES2015 and React code to normal javascript.
           presets: ["es2015", "react"],
         },
+      },
+
+      // Process CSS files.
+      {
+        // The matching conditions.
+        test: /\.css$/,
+
+        use: [
+          // A loader to apply.
+          require.resolve('style-loader'),
+
+          {
+            // A loader to apply.
+            loader: require.resolve('css-loader'),
+
+            // Options for the loader.
+            options: {
+              importLoaders: 1,
+            },
+          },
+        ],
+      },
+
+      // Process markdown files.
+      {
+        // The matching conditions.
+        test: /\.md$/,
+
+        use: [
+          // A loader to apply.
+          require.resolve('html-loader'),
+
+          // A loader to apply.
+          require.resolve('markdown-loader'),
+        ],
       },
     ],
   },
@@ -81,7 +116,7 @@ module.exports = {
   
   // List of additional plugins.
   plugins: [
-    // Generates an `index.html` file with the <script> injected.
+    // Generates an HTML file with the <script> injected.
     new HtmlWebpackPlugin({
       // Injects the <script>.
       inject: true,
@@ -95,7 +130,12 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
 
-    // This is necessary to emit hot updates (currently CSS only).
+    // Enables Hot Module Replacement.
     new webpack.HotModuleReplacementPlugin(),
+
+    // When there are errors while compiling this plugin skips the
+    // emitting phase (and recording phase), so there are no assets
+    // emitted that include errors.
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 };
