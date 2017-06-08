@@ -6,51 +6,42 @@
  */
 
 .NavBar {
+  /* Forces the NavBar to always be at the top of the screen. */
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
 
+  width: 100%;
+  border: 1px solid #FFF;
   background-color: #000;
   color: #FFF;
-  text-align: center;
-  text-shadow: 0 0 5px #FFF;
-  border-style: outset;
-  border-width: 2px;
-  box-shadow: 10px 0 10px #FFF;
-
-  display: block;
 }
 
-ul {
+.NavBarList {
   list-style-type: none;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
-li {
+.NavBarListItem {
   float: left;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Highlights a NavBar element on hover */
-li a:hover:not(.active) {
-  color: #0afc26;
-}
-
-/* Colors the active NavBar element. */
-.active {
+/* Colors the active NavBar item. */
+.NavBarActive {
   background-color: #067a13;
 }
 
-.BuildStatus {
-  float: right;
+.NavBarLink {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: #FFF;
+}
+
+/* Highlights a NavBarLink on hover. */
+.NavBarLink:hover {
+  color: #0afc26;
 }
