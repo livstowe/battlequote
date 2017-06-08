@@ -10,6 +10,9 @@ import Logo from '../Logo/Logo';
 import NavBarItem from './NavBarItem';
 import './NavBar.css';
 
+// Used to offset the NavBar location when jumping to an anchor.
+window.addEventListener("hashchange", () => { window.scrollBy(0, -50); } );
+
 const NavBar = () => (
   <div>
     <div className="NavBar">
@@ -24,9 +27,6 @@ const NavBar = () => (
         <NavBarItem path="/404" name="404" />
       </ul>
     </div>
-
-    <br />
-    <br />
   </div>
 );
 
