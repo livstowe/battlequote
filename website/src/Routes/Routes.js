@@ -7,8 +7,8 @@
  */
 
 import React from 'react';
+import createBrowserHistory from 'history/createBrowserHistory'
 import {
-  browserHistory,
   BrowserRouter as Router,
   Redirect,
   Route,
@@ -23,8 +23,17 @@ import Issues from '../Issues/Issues';
 import Contact from '../Contact/Contact';
 import NotFound from '../NotFound/NotFound';
 
+var history = createBrowserHistory();
+
+// Update Google Analytics on virtual page changes.
+// This is required to handle client routing.
+history.listen((location) => {
+  window.ga('set', 'page', location.pathname + location.search);
+  window.ga('send', 'pageview');
+});
+
 const Routes = () => (
-  <Router history={browserHistory}>
+  <Router history={history}>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
