@@ -14,10 +14,9 @@ import './NavBar.css';
 window.addEventListener("hashchange", () => { window.scrollBy(0, -50); } );
 
 const NavBar = () => (
-  <div>
-    <div className="NavBar">
-      <Logo />
-
+  <div className="NavBar">
+    <Logo />
+    <div>
       <ul className="NavBarList">
         <NavBarItem path="/" name="Home" />
         <NavBarItem path="/about" name="About" />
@@ -26,7 +25,7 @@ const NavBar = () => (
         <NavBarItem path="/contact" name="Contact" />
         <NavBarItem path="/404" name="404" />
       </ul>
-    </div>
+     </div>
   </div>
 );
 

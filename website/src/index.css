@@ -41,4 +41,5 @@ div.Markdown {
 img.Center {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
