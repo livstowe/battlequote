@@ -15,9 +15,15 @@ class Home extends Component {
     return (
       <div>
         <NavBar />
-        <h1 className="Title">Welcome</h1>
-        <p>This project is currently underway.</p>
-        <p>Please try the navigation bar above.</p>
+        <h1 className="BlueGlow CenterText">Welcome</h1>
+        <p style={{ textAlign: "center" }}>
+          Status:&nbsp;
+          <span className="BlueGlow">in progress</span>.
+          <br />
+          <br />
+          Click the links or the &nbsp; 
+          <span className="BlueGlow">&#9776;</span>.
+        </p>
         <Loader />
       </div>
     );

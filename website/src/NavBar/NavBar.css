@@ -6,46 +6,78 @@
  */
 
 .NavBar {
-  /* Forces the NavBar to always be at the top of the screen. */
+  /* Keep the NavBar at the top of the screen. */
   position: fixed;
-  width: 100%;
-  height: 45px;
   left: 0;
   top: 0;
+
   z-index: 100;
-  
-  overflow: auto;
+  width: 100%;
   border: 1px solid #FFF;
   background-color: #000;
   color: #FFF;
 }
 
-.NavBarList {
-  list-style-type: none;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.NavBarListItem {
+.NavBarItem {
   float: left;
-  height: 45px;
-}
-
-/* Colors the active NavBar item. */
-.NavBarActive {
-  background-color: #067a13;
-}
-
-.NavBarLink {
-  display: block;
+  font-size: 16px;
+  height: 28px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 16px;
   text-align: center;
   text-decoration: none;
-  padding: 14px 16px;
   color: #FFF;
 }
 
-/* Highlights a NavBarLink on hover. */
-.NavBarLink:hover {
+/* Color the active NavBar item. */
+.NavBarItem.Active {
+  background-color: #067a13;
+}
+
+/* Highlight NavBar items on hover. */
+.NavBarItem:hover {
   color: #0afc26;
+}
+
+/* Hide the NavBar expand icon. */
+.NavBarExpandIcon {
+  display: none;
+}
+
+/* Format the NavBar for smaller screens. */
+@media screen and (max-width: 700px) {
+
+  /* Display the NavBar expand icon. */
+  .NavBarExpandIcon {
+    cursor: pointer;
+    display: block;
+    font-size: 24px;
+    height: 42px;
+    padding-top: 2px;
+    text-align: left;
+  }
+
+  /* Highlight the NavBar expand icon on hover. */
+  .NavBarExpandIcon:hover {
+    color: #0afc26;
+  }
+
+  /* Hide the NavBar items. */
+  .NavBar .NavBarItem {
+    display: none;
+  }
+
+  /* Highlight the NavBar expand icon when the NavBar is expanded. */
+  .NavBar.Expanded .NavBarExpandIcon{
+    color: #0afc26;
+  }
+
+  /* Set the NavBar items visible when the NavBar is expanded. */
+  .NavBar.Expanded .NavBarItem {
+    display: block;
+    float: none;
+    padding-left: 60px;
+    text-align: left;
+  }
 }

@@ -14,8 +14,9 @@ import './Issues.css';
 class Issues extends Component {
   constructor(props) {
     super(props);
-    this.state = {openIssues:[], closedIssues:[]};
+    this.state = { openIssues:[], closedIssues:[] };
     this.issueRequest = new IssueRequest();
+    
     this.updateIssues = this.updateIssues.bind(this);
   }
 
@@ -52,10 +53,12 @@ class Issues extends Component {
     return (
       <div>
         <NavBar />
-        <h1 className="Title">Open</h1>
-        <IssueTable issues={this.state.openIssues} />
-        <h1 className="Title">Closed</h1>
-        <IssueTable issues={this.state.closedIssues} />
+        <div className="IssuesPage">
+          <h1 className="BlueGlow">Open</h1>
+          <IssueTable issues={this.state.openIssues} />
+          <h1 className="BlueGlow">Closed</h1>
+          <IssueTable issues={this.state.closedIssues} />
+        </div>
       </div>
     );
   }
