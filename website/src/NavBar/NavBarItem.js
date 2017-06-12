@@ -13,15 +13,13 @@ const NavBarItem = (props) => {
   // The currently active NavBarItem should be highlighted.
   // This is done using the current URL and the NavBarActive class name.
   const currentPath = window.location.pathname;
-  let className = 'NavBarListItem';
+  let className = 'NavBarItem';
   if (props.path === currentPath) {
-    className += ' NavBarActive';
+    className += ' Active';
   }
 
   return (
-    <li className={className}>
-      <Link className="NavBarLink" to={props.path}>{props.name}</Link>
-    </li>
+    <Link className={className} to={props.path}>{props.name}</Link>
   );
 };
 

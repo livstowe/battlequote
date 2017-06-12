@@ -14,8 +14,9 @@ import './Issues.css';
 class Issues extends Component {
   constructor(props) {
     super(props);
-    this.state = {openIssues:[], closedIssues:[]};
+    this.state = { openIssues:[], closedIssues:[] };
     this.issueRequest = new IssueRequest();
+    
     this.updateIssues = this.updateIssues.bind(this);
   }
 
