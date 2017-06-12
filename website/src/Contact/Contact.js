@@ -6,6 +6,7 @@
  */
 
 import React, { Component } from 'react';
+import ContactItem from "./ContactItem";
 import NavBar from '../NavBar/NavBar';
 import './Contact.css';
 
@@ -15,34 +16,26 @@ class Contact extends Component {
       <div>
         <NavBar />
         <h1 className="BlueGlow CenterText">Chris Stowe</h1>
-        <table className="ContactTable">
-          <tbody>
-            <tr className="ContactRow">
-              <td className="ContactType">Email:</td>
-              <td className="ContactValue">
-                <a href="mailto:chstowe@gmail.com">
-                  chstowe@gmail.com
-                </a>
-              </td>
-            </tr>
-            <tr className="ContactRow">
-              <td className="ContactType">Twitter:</td>
-              <td className="ContactValue">
-                <a href="https://twitter.com/realchrisstowe">
-                  @realchrisstowe
-                </a>
-              </td>
-            </tr>
-            <tr className="ContactRow">
-              <td className="ContactType">GitHub:</td>
-              <td className="ContactValue">
-                <a href="https://github.com/chrisstowe">
-                  https://github.com/chrisstowe
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <ContactItem
+          name="email"
+          link="mailto:chstowe@gmail.com"
+          image="https://storage.googleapis.com/battlequote/images/social-media-icons/mail.svg"
+        />
+        <ContactItem
+          name="twitter"
+          link="https://twitter.com/realchrisstowe"
+          image="https://storage.googleapis.com/battlequote/images/social-media-icons/twitter.svg"
+        />
+        <ContactItem
+          name="facebook"
+          link="https://www.facebook.com/christopher.stowe.1"
+          image="https://storage.googleapis.com/battlequote/images/social-media-icons/facebook.svg"
+        />
+        <ContactItem
+          name="github"
+          link="https://github.com/chrisstowe"
+          image="https://storage.googleapis.com/battlequote/images/social-media-icons/github.svg"
+        />
       </div>
     );
   }
