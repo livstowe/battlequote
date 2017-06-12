@@ -18,10 +18,10 @@ const IssueTable = (props) => {
   return (
     <table className="IssueTable">
       <tbody>
-        <tr className="IssueHeader">
-          <th>Number</th>
-          <th>Title</th>
-          <th>Labels</th>
+        <tr >
+          <th className="IssueHeader">#</th>
+          <th className="IssueHeader">Title</th>
+          <th className="IssueHeader">Labels</th>
         </tr>
         {rows}
       </tbody>

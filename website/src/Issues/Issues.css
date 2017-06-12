@@ -5,18 +5,23 @@
  * Description: The style for the Issues component.
  */
  
+ .IssuesPage {
+   min-width: 700px;
+ }
+
 .IssueTable {
-  width: 800px;
   border-collapse: collapse;
   background-color: #FFF;
   color: #000;
   font-family: Arial, sans-serif;
   font-size: 12;
+  width:100%;
  }
 
 .IssueHeader {
   background-color: #067a13;
   color: #FFF;
+  min-width: 50px;
 }
 
 .IssueRow {
