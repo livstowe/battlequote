@@ -17,11 +17,15 @@ body {
   color: #FFF;
 }
 
-/* Style for page titles. */
-.Title {
-  text-align: center;
-  text-shadow: 0 0 5px #FFF;
+/* Style for glowing blue text. */
+.BlueGlow {
   color: #AFF;
+  text-shadow: 0 0 5px #FFF;
+}
+
+/* Style for centering text. */
+.CenterText {
+  text-align: center;
 }
 
 /* Style for markdown elements. */

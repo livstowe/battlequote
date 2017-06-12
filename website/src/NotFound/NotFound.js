@@ -12,7 +12,7 @@ import './NotFound.css';
 const NotFound = () => (
   <div>
     <NavBar />
-    <h1 className="Title">404 - This is not the web page you are looking for.</h1>
+    <h1 className="BlueGlow CenterText">404 - This is not the web page you are looking for.</h1>
     <img 
       className="Center"
       src="https://storage.googleapis.com/battlequote/images/kenobi.png"

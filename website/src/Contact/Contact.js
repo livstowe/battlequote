@@ -14,8 +14,7 @@ class Contact extends Component {
     return (
       <div>
         <NavBar />
-        <h1 className="Title">Ready to chat?</h1>
-        <h2>Chris Stowe</h2>
+        <h1 className="BlueGlow CenterText">Chris Stowe</h1>
         <table className="ContactTable">
           <tbody>
             <tr className="ContactRow">

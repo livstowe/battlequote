@@ -11,7 +11,7 @@ import NavBarItem from './NavBarItem';
 import './NavBar.css';
 
 // Used to offset the NavBar location when jumping to an anchor.
-window.addEventListener('hashchange', () => { window.scrollBy(0, -50); } );
+window.addEventListener('hashchange', () => { window.scrollBy(0, -55); } );
 
 /**
  * The main navigation menu for the website.
